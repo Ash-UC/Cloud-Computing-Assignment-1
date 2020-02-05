@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+body {
+  background-image: url("/static/awper.jpg");
+  background-size: 1540px 768px;
+  text-align: left;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+</head>
+<body>
+<img src="/static/avatar.png" alt="Avatar" class="avatar" style="width:200px" align="right">
+</br>
+<h2>Logged in awper details :</h2>
+<p><b>First Name : {{firstName}}</b></p>
+<p><b>Last Name : {{lastName}}</b></p>
+<p><b>Email Address : {{email}}</b></p>
+</br></br>
+<h3>Select a file to count</h3>
+<h3>the frequency of characters in it :</h3>
+<form action = "{{ url_for('uploader') }}" method = "POST" 
+         enctype = "multipart/form-data">
+         <input type = "file" name = "file" />
+         <input type = "submit"/>
+</form>
+
+</body>
+</html>
